@@ -29,8 +29,8 @@ export default (state = [], action) => {
       return {
         ...quote,
         if (votes !== 0) {
-        votes: quote.votes - 1
-      }
+          votes: quote.votes - 1
+        }
       }
     })
     default:
