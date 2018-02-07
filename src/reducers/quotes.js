@@ -14,7 +14,7 @@ export default (state = [], action) => {
     case 'UPVOTE_QUOTE':
       return state.map(quote => {
         if (quote.id === action.quoteId) {
-          quote.votes++
+          quote.votes + 1
         }
       })
     default:
