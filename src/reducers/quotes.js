@@ -1,4 +1,4 @@
-import uuit from 'uuid';
+import uuid from 'uuid';
 
 export default (state = [], action) => {
   switch (action.type) {
