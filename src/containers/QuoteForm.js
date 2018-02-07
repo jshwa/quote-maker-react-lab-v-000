@@ -14,7 +14,9 @@ export class QuoteForm extends Component {
   }
 
   handleOnChange = event => {
-    this.setState({[event.target.name]: event.target.value})
+    this.setState({
+      [event.target.name]: event.target.value
+    })
   }
 
   handleOnSubmit = event => {
