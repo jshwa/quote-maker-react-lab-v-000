@@ -13,8 +13,12 @@ export default (state = [], action) => {
       return state.filter(quote => quote.id !== action.quoteId)
     case 'UPVOTE_QUOTE':
       return state.map(quote => {
-        if (quote.id === action.quoteId) {
-          quote.votes + 1
+        if (quote.id !== action.quoteId) {
+          return quote
+        }
+        return {
+          ...quote,
+          votes: votes + 1
         }
       })
     default:
