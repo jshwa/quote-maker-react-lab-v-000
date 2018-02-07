@@ -6,7 +6,7 @@ export default (state = [], action) => {
       return [...state, {
         author: action.quote.author,
         content: action.quote.content,
-        id: uuid(),
+        id: action.quote.id,
         votes: 0
       }]
   }
