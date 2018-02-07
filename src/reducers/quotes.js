@@ -10,7 +10,7 @@ export default (state = [], action) => {
         votes: 0
       }];
     case 'REMOVE_QUOTE':
-      return state.filter(quote => quote.id !== action.quote.id)
+      return state.filter(quote => id !== action.quote.id)
     default:
       return state;
   }
