@@ -21,6 +21,16 @@ export default (state = [], action) => {
           votes: quote.votes + 1
         }
       })
+    case 'DOWNVOTE_QUOTE':
+    return state.map(quote => {
+      if (quote.id !== action.quoteId) {
+        return quote
+      }
+      return {
+        ...quote,
+        votes: quote.votes - 1
+      }
+    })
     default:
       return state;
   }
