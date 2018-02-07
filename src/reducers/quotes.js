@@ -26,11 +26,13 @@ export default (state = [], action) => {
       if (quote.id !== action.quoteId) {
         return quote
       }
-      return {
-        ...quote,
-        if (votes !== 0) {
-          votes: quote.votes - 1
+      if (quote.votes !== 0) {
+        return {
+          ...quote,
+            votes: quote.votes - 1
         }
+      } else {
+        return quote
       }
     })
     default:
