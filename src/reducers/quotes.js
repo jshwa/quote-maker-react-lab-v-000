@@ -18,7 +18,7 @@ export default (state = [], action) => {
         }
         return {
           ...quote,
-          votes: votes + 1
+          votes: quote.votes + 1
         }
       })
     default:
