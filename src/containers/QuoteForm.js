@@ -29,8 +29,6 @@ export class QuoteForm extends Component {
       author: '',
       content: ''
     })
-    // Create quote object from state
-    // Pass quote object to action creator
   }
 
   render() {
